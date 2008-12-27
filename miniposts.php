@@ -3,7 +3,7 @@
 Plugin Name: Miniposts
 Plugin URI: http://www.piepalace.ca/blog/projects/miniposts/
 Description: An approach to "asides", or small posts. Allows you to mark entries as "mini" posts and handle them differently than normal posts. 
-Version: 0.6.8
+Version: 0.6.9
 Author: Morgan Doocy and e
 Author URI: http://piepalace.ca/blog/
 */
@@ -69,6 +69,9 @@ Changelog
        - Cleaned up JOIN/WHERE clauses so queries are (more) sane
        - Split the options page out into a separate file
        - Added a missing '%' in the default MORE substitution text. 
+0.6.9  - Added a missing 'delete_post_meta()' to the update-on-save. Stupid 
+            Wordpress doesn't provide an update_or_add_post_meta(). Fixes
+            problem reported by Lan and mptorriani.
 */
 
 define('MINIPOST_ID', "Miniposts"); // Id for the wp_*_widget() fns
@@ -304,6 +307,7 @@ function plugin_minipost2_update_post($id) {
         && $_POST['miniposts_nonce'] == miniposts_nonce()
     ) {
         $setting = (isset($_POST["is_mini_post"]) && $_POST["is_mini_post"] == "1") ? 1 : 0;
+        delete_post_meta($id, '_mini_post');
         add_post_meta($id, '_mini_post', $setting, true);
     }
 
