@@ -3,7 +3,7 @@ Contributors: erigami
 Tags: aside, minipost, linkblog, widget, twitter
 Requires at least: 2.0.2
 Tested up to: 2.7
-Stable tag: 0.6.9
+Stable tag: 0.6.10
 
 Create small posts outside the main flow of your blog. Integrates into any theme that supports widgets.
 
@@ -15,6 +15,7 @@ in a widget on your main page (or elsewhere). Features:
 
 * Integrates easily into any theme that supports widgets
 * Complete control of minipost appearance. Show the title, text, comment count, post date, permalink, and custom 'more' text. 
+* Posts created with QuickPress admin widget can be marked as miniposts.
 * Miniposts will show a teaser if the post has an excerpt or a <code>&lt;!--more--&gt;</code> tag.
 * API to integrate minipost display into non-widgetty themes
 
