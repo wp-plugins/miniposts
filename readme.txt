@@ -18,6 +18,7 @@ in a widget on your main page (or elsewhere). Features:
 * Miniposts will show a teaser if the post has an excerpt or a <code>&lt;!--more--&gt;</code> tag.
 * API to integrate minipost display into non-widgetty themes
 
+*NOTE: * Version 0.6.8 and up requires Wordpress 2.7. 
 
 == Installation ==
 

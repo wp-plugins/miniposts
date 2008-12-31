@@ -72,6 +72,8 @@ Changelog
 0.6.9  - Added a missing 'delete_post_meta()' to the update-on-save. Stupid 
             Wordpress doesn't provide an update_or_add_post_meta(). Fixes
             problem reported by Lan and mptorriani.
+0.6.10 - Added a Minipost checkbox to the quickpress plugin on the admin 
+            dashboard. Added at the request of Lan.
 */
 
 define('MINIPOST_ID', "Miniposts"); // Id for the wp_*_widget() fns
@@ -372,6 +374,45 @@ function miniposts_nonce() {
     return $nonce;
 }
 
+/**
+ * Called on the 'media_buttons' action, which allows us to smuggle a 
+ * "minipost" checkbox into the quickpress
+ */
+function widget_miniposts2_media_buttons() {
+    if (!function_exists('debug_backtrace')) {
+        return;
+    }
+
+    $bt = debug_backtrace();
+
+    $shouldRun = false;
+
+    foreach ($bt as $frame) {
+        if ($frame['function'] == 'wp_dashboard_quick_press') {
+            $shouldRun = true;
+            break;
+        }
+    }
+
+    if (!$shouldRun) {
+        return;
+    }
+
+?>
+<div style="float: right;" class="quickpress-minipost">
+    <label title="<?= __('Mark this as a minipost', "MiniPosts") ?>">
+        <input type="checkbox" name="is_mini_post" id="is_mini_post" value="1"/>
+        <?php print __('Mini', 'MiniPosts'); ?>
+    </label>
+    <input type="hidden" name="miniposts_nonce" value="<?php 
+        print miniposts_nonce();
+    ?>">
+</div>
+<?php
+}
+
+
+add_action('media_buttons', 'widget_miniposts2_media_buttons');
 
 //add_action('plugins_loaded', 'widget_miniposts_init');
 ?>
