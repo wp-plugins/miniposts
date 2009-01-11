@@ -189,7 +189,7 @@ function get_mini_posts(
                 $title = $minipost->post_title;
                     
                 $count = miniposts_get_comment_count($minipost->ID);
-                $commentcount = "<a class=\"minipost_commentlink\" href=\"$commenturl\" title=\"Comments for '$title'\">$count</a>";
+                $commentcount = "<a class=\"minipost_commentlink minipost_commentlink_count_$count\" href=\"$commenturl\" title=\"Comments for '$title'\"><span class=\"count\">$count</span></a>";
 
                 if ($title) {
                     $title = strip_tags($title);
