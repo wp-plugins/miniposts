@@ -3,7 +3,7 @@ Contributors: erigami
 Tags: aside, minipost, linkblog, widget, twitter
 Requires at least: 2.0.2
 Tested up to: 2.7
-Stable tag: 0.6.10
+Stable tag: 0.6.11
 
 Create small posts outside the main flow of your blog. Integrates into any theme that supports widgets.
 
@@ -19,7 +19,7 @@ in a widget on your main page (or elsewhere). Features:
 * Miniposts will show a teaser if the post has an excerpt or a <code>&lt;!--more--&gt;</code> tag.
 * API to integrate minipost display into non-widgetty themes
 
-*NOTE: * Version 0.6.8 and up requires Wordpress 2.7. 
+*NOTE:* Version 0.6.8 and up requires Wordpress 2.7. 
 
 == Installation ==
 
