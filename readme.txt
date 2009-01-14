@@ -3,7 +3,7 @@ Contributors: erigami
 Tags: aside, minipost, linkblog, widget, twitter
 Requires at least: 2.0.2
 Tested up to: 2.7
-Stable tag: 0.6.11
+Stable tag: 0.6.12
 
 Create small posts outside the main flow of your blog. Integrates into any theme that supports widgets.
 
@@ -39,3 +39,11 @@ MiniPosts2 provides two functions, <code>is_mini_post()</code>, and <code>get_mi
 
 **<code>get_mini_posts($format = null, $limit = null)</code>** - This function displays the existing miniposts. If either of the arguments are specified as non-null then the display is changed. The *$format* variable is used to specify a format, over-riding the values specified on the Options page.
 
+
+== Changelog ==
+
+= 0.6.12 =
+* Fixed permissions check in post save. Non-admin users should now be able to create miniposts (thanks for finding this one, [http://www.theblackrepublican.net/](Chris)).
+
+= 0.6.11 =
+* Added styling on the comment count. Allows [http://wordpress.org/support/topic/230058?replies=15](arbitrary text to be shown for the zeroeth comment link). Added at the request of [http://wordpress.org/support/profile/1524092](Lovelidicious).
