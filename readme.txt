@@ -43,7 +43,7 @@ MiniPosts2 provides two functions, <code>is_mini_post()</code>, and <code>get_mi
 == Changelog ==
 
 = 0.6.12 =
-* Fixed permissions check in post save. Non-admin users should now be able to create miniposts (thanks for finding this one, [http://www.theblackrepublican.net/](Chris)).
+* Fixed permissions check in post save. Non-admin users should now be able to create miniposts (thanks for finding this one, [Chris](http://www.theblackrepublican.net/)).
 
 = 0.6.11 =
-* Added styling on the comment count. Allows [http://wordpress.org/support/topic/230058?replies=15](arbitrary text to be shown for the zeroeth comment link). Added at the request of [http://wordpress.org/support/profile/1524092](Lovelidicious).
+* Added styling on the comment count. Allows [arbitrary text to be shown for the zeroeth comment link](http://wordpress.org/support/topic/230058?replies=15). Added at the request of [Lovelidicious](http://wordpress.org/support/profile/1524092).
