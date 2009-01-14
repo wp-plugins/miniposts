@@ -304,7 +304,7 @@ function plugin_minipost2_sidebar() {
 
 
 function plugin_minipost2_update_post($id) {
-    if ( current_user_can('edit_post', $post_id) 
+    if ( current_user_can('edit_post', $id) 
         && isset($_POST["miniposts_nonce"]) 
         && $_POST['miniposts_nonce'] == miniposts_nonce()
     ) {
