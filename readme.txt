@@ -3,7 +3,7 @@ Contributors: erigami
 Tags: aside, minipost, linkblog, widget, twitter
 Requires at least: 2.0.2
 Tested up to: 2.7
-Stable tag: 0.6.12
+Stable tag: 0.7.0
 
 Create small posts outside the main flow of your blog. Integrates into any theme that supports widgets.
 
@@ -41,6 +41,9 @@ MiniPosts2 provides two functions, <code>is_mini_post()</code>, and <code>get_mi
 
 
 == Changelog ==
+
+= 1.0 =
+* Changed versioning scheme to avoid wordpress.org bug.
 
 = 0.6.12 =
 * Fixed permissions check in post save. Non-admin users should now be able to create miniposts (thanks for finding this one, [Chris](http://www.theblackrepublican.net/)).
