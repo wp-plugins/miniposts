@@ -3,7 +3,7 @@ Contributors: erigami
 Tags: aside, minipost, linkblog, widget, twitter
 Requires at least: 2.0.2
 Tested up to: 2.7
-Stable tag: 0.7.0
+Stable tag: 0.6.13
 
 Create small posts outside the main flow of your blog. Integrates into any theme that supports widgets.
 
@@ -41,6 +41,9 @@ MiniPosts2 provides two functions, <code>is_mini_post()</code>, and <code>get_mi
 
 
 == Changelog ==
+
+= 0.6.13 =
+* Incremented version number in miniposts.php.
 
 = 1.0 =
 * Changed versioning scheme to avoid wordpress.org bug.
