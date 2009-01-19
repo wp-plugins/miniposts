@@ -3,7 +3,7 @@
 Plugin Name: Miniposts
 Plugin URI: http://www.piepalace.ca/blog/projects/miniposts/
 Description: An approach to "asides", or small posts. Allows you to mark entries as "mini" posts and handle them differently than normal posts. 
-Version: 0.6.9
+Version: 0.6.13
 Author: Morgan Doocy and e
 Author URI: http://piepalace.ca/blog/
 */
