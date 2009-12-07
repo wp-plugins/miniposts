@@ -3,7 +3,7 @@ Contributors: erigami
 Tags: aside, minipost, linkblog, widget, twitter
 Requires at least: 2.0.2
 Tested up to: 2.7
-Stable tag: 0.6.13
+Stable tag: 0.6.14
 
 Create small posts outside the main flow of your blog. Integrates into any theme that supports widgets.
 

@@ -1,46 +1,7 @@
 <?php
-include(ABSPATH.'wp-blog-header.php');
 
 $paged_val = get_query_var('paged');
 $paged_val = $paged_val ? "&paged=$paged_val" : '';
-
-if (isset($_POST["update_options"])) {
-    $errors = array();
-
-    update_option('filter_mini_posts_from_loop', $_POST['filter_mini_posts_from_loop'] == 1 ? 1 : 0);
-
-    update_option('suppress_autop_on_mini_posts', $_POST['suppress_autop_on_mini_posts'] == 1 ? 1 : 0);
-
-    update_option('filter_mini_posts_from_feeds', $_POST['filter_mini_posts_from_feeds'] == 1 ? 1 : 0);
-    
-    if (ctype_digit($_POST['miniposts_maximum'])) {
-        update_option('miniposts_maximum', $_POST['miniposts_maximum']);
-    }
-    else {
-        $errors[] = __("Maximum number of miniposts must be a number.");
-    }
-    
-    update_option('miniposts_format', stripslashes($_POST['miniposts_format']));
-    
-    update_option('miniposts_date_format', stripslashes($_POST['miniposts_date_format']));
-    
-    update_option('miniposts_more_text', stripslashes($_POST['miniposts_more_text']));
-
-    update_option('miniposts_title', stripslashes($_POST['miniposts_title']));
-
-    if (sizeof($errors) == 0) {
-        echo '<div class="updated"><p><strong>' . __('Options saved.', 'MiniPosts') . '</strong></p></div>';
-    } else {
-        echo '<div class="error"><p><strong>';
-        echo __('Options partially saved. Error in the data submitted: ', 'MiniPosts');
-        foreach ($errors as $e) {
-            echo '<li>';
-            echo $e;
-            echo "</li>\n";
-        }
-        echo '</strong></p></div>';
-    }
-}
 
 $ck_filter_mini_posts_from_loop = get_settings('filter_mini_posts_from_loop') == 1 ? 'checked="checked" ' : '';
 $ck_suppress_autop_on_mini_posts = get_settings('suppress_autop_on_mini_posts') == 1 ? 'checked="checked" ' : '';
@@ -52,7 +13,7 @@ $ck_filter_mini_posts_from_feeds = get_settings('filter_mini_posts_from_feeds') 
     <br/>
 </div>
 <h2><?php _e('Minipost Options', 'MiniPosts') ?></h2>
-<form method="post" action="./options-general.php?page=<?php echo 'miniposts/' . basename(__FILE__) . $paged_val; ?>">
+<form method="post" action="">
     <table width="100%" cellspacing="2" cellpadding="5" class="form-table">
         <tr valign="top">
             <th scope="row"><?php _e('Filtering', 'MiniPost') ?></th>
